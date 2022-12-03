@@ -1,10 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-    //use Facebook\Facebook;
-
-=======
->>>>>>> 92c8e5db93b75dceaa504262f3230f387a3a4062
     include 'defines.php';
 
     // load graph-sdk files
@@ -30,10 +25,6 @@
     if(isset($_GET['code'])){ // get access token
         try {
             $accessToken = $helper->getAccessToken();
-<<<<<<< HEAD
-        } catch (Facebook\Exceptions\FacebookResponseException.php $e){
-            echo 'Graph returned an error ' . $e->getMessage;
-=======
         } catch (Facebook\Exceptions\FacebookResponseException $e){
             echo 'Graph returned an error ' . $e->getMessage();
         } catch (Facebook\Exceptions\FacebookSDKException $e) {
@@ -49,7 +40,6 @@
             } catch( Facebook\Exceptions\FacebookSDKException){
                 echo 'Error getting long lived access token ' . $e->getMessage();
             }
->>>>>>> 92c8e5db93b75dceaa504262f3230f387a3a4062
         }
 
         echo '<pre>';

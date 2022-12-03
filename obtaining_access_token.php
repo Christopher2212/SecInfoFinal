@@ -1,6 +1,6 @@
 <?php
 
-    use Facebook\Facebook;
+    //use Facebook\Facebook;
 
     include 'defines.php';
 
@@ -27,7 +27,7 @@
     if(isset($_GET['code'])){ // get access token
         try {
             $accessToken = $helper->getAccessToken();
-        } catch (php-graph-sdk-5.x\src\Facebook\Exceptions\FacebookResponseException.php $e){
+        } catch (Facebook\Exceptions\FacebookResponseException.php $e){
             echo 'Graph returned an error ' . $e->getMessage;
         }
 

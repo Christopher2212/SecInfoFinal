@@ -1,11 +1,11 @@
 <?php
 
-use Facebook\Facebook;
+    use Facebook\Facebook;
 
     include 'defines.php';
 
     // load graph-sdk files
-    require_once __DIR__ . 'php-graph-sdk-5.x\src\Facebook\autoload.php'
+    require_once __DIR__ . 'php-graph-sdk-5.x\src\Facebook\autoload.php';
             
     // facebook credentials array
 

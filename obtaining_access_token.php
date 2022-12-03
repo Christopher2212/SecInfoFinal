@@ -1,9 +1,8 @@
 <?php
-
     include 'defines.php';
 
     // load graph-sdk files
-    require_once __DIR__ . 'php-graph-sdk-5.x\src\Facebook\autoload.php';
+    require_once __DIR__ . '\Facebook\autoload.php';
             
     // facebook credentials array
 
@@ -37,8 +36,8 @@
         if ( !$accessToken->isLongLived()) { // exchange short for long
             try {
                 $accessToken = $oAuth2Client->getLongLivedAccessToken( $accessToken );
-            } catch( Facebook\Exceptions\FacebookSDKException){
-                echo 'Error getting long lived access token ' . $e->getMessage();
+            } catch(Facebook\Exceptions\FacebookSDKException $e){
+                echo 'Error getting long lived access token ' + $e->getMessage();
             }
         }
 
@@ -50,7 +49,7 @@
         print_r($accessToken);
 
     }else{
-        $perissions = ['public_profile', 'instagram_basic', 'pages_show_list'];
+        $permissions = ['public_profile', 'instagram_basic', 'pages_show_list'];
         $loginUrl  = $helper -> getLoginUrl(FACEBOOK_APP_REDIRECT_URI, $permissions);
         
         echo '<a href="' . $loginUrl . '">
